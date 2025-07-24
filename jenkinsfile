@@ -4,8 +4,8 @@ pipeline {
     environment {
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub-creds'  // Jenkins credentials ID for Docker Hub
         ARGOCD_CREDENTIALS_ID = 'argocd-token'         // ArgoCD API token stored in Jenkins credentials
-        FRONTEND_IMAGE_NAME = 'milinddethe15/chat-cluster-frontend'
-        BACKEND_IMAGE_NAME = 'milinddethe15/chat-cluster-backend'
+        FRONTEND_IMAGE_NAME = 'vickybesra2000/chat_cluster_frontend'
+        BACKEND_IMAGE_NAME = 'vickybesra2000/chat_cluster'
         FRONTEND_DIR = 'frontend'
         BACKEND_DIR = 'backend'
         ARGOCD_SERVER = ''  // Update with the correct ArgoCD external IP
@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/milinddethe15/chat-cluster.git', branch: 'main'
+                git url: 'https://github.com/vickybesra/chat_cluster.git', branch: 'main'
             }
         }
         

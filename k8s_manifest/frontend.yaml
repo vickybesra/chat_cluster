@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: chat-frontend
-        image: milinddethe15/chat-cluster-frontend:latest
+        image: vickybesra2000/chat_cluster_frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

@@ -16,13 +16,13 @@ spec:
     spec:
       containers:
       - name: chat-backend
-        image: milinddethe15/chat-cluster-backend:latest
+        image: vickybesra2000/chat_cluster:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
         env:
         - name: MONGO_DB_URI
-          value: mongodb://root:password@mongodb.chat-cluster.svc.cluster.local:27017/chat?authSource=admin
+          value: mongodb://root:password@mongodb.chat-cluster.svc.cluster.local:27017/admin?authSource=admin
         - name: JWT_SECRET
           value: strongest
         - name: NODE_ENV
